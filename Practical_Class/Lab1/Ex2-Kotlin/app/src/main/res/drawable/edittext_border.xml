@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFF00" /> <!-- Màu vàng khi nhấn chọn -->
+            <stroke android:color="#808080" android:width="2dp" /> <!-- Viền xám -->
+            <corners android:radius="8dp" /> <!-- Bo góc -->
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" /> <!-- Màu trắng khi không nhấn chọn -->
+            <stroke android:color="#808080" android:width="2dp" /> <!-- Viền xám -->
+            <corners android:radius="8dp" /> <!-- Bo góc -->
+        </shape>
+    </item>
+
+</selector>

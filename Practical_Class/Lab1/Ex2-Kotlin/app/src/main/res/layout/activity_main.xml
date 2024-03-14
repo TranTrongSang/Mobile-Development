@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    android:background="#000000">
+
+    <TextView
+        android:id="@+id/textlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the phone number:"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/white" />
+
+
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textlabel"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="16dp"
+        android:drawablePadding="8dp"
+        android:fontFamily="sans-serif"
+        android:hint="Phone Number"
+        android:gravity="center"
+        android:inputType="phone"
+        android:letterSpacing="0.02"
+        android:maxLength="10"
+        android:numeric="integer"
+        android:padding="12dp"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        tools:ignore="Deprecated"
+        android:background="@drawable/edittext_border"/>
+
+
+    <Button
+        android:id="@+id/callButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phoneNumber"
+        android:layout_marginTop="18dp"
+        android:onClick="makePhoneCall"
+        android:text="Call"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
