@@ -23,35 +23,10 @@
         android:rowCount="5">
 
         <Button
-            android:id="@+id/button_clear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="C"/>
-
-        <Button
-            android:id="@+id/buttonDivide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="/"/>
-
-        <Button
-            android:id="@+id/buttonMultiply"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="*"/>
-
-        <Button
-            android:id="@+id/button_backspace"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="←"/>
-
-        <Button
             android:id="@+id/button7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="7"/>
-
         <Button
             android:id="@+id/button8"
             android:layout_width="wrap_content"
@@ -63,12 +38,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="9"/>
-
         <Button
-            android:id="@+id/buttonSubtract"
+            android:id="@+id/buttonDivide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="-"/>
+            android:text="/"/>
+
+
 
         <Button
             android:id="@+id/button4"
@@ -87,13 +63,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="6"/>
-
         <Button
-            android:id="@+id/buttonAdd"
+            android:id="@+id/buttonMultiply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+"/>
-
+            android:text="*"/>
         <Button
             android:id="@+id/button1"
             android:layout_width="wrap_content"
@@ -113,11 +87,10 @@
             android:text="3"/>
 
         <Button
-            android:id="@+id/button_equal"
+            android:id="@+id/buttonSubtract"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_rowSpan="2"
-            android:text="="/>
+            android:text="-"/>
 
         <Button
             android:id="@+id/button0"
@@ -125,12 +98,29 @@
             android:layout_height="wrap_content"
             android:text="0"/>
 
+
+
+
         <Button
-            android:id="@+id/buttonDecimal"
+            android:id="@+id/button_equal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="."/>
+            android:layout_rowSpan="2"
+            android:text="="/>
+        <Button
+            android:id="@+id/button_backspace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="<-"/>
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"/>
 
     </GridLayout>
 
 </RelativeLayout>
+
+
