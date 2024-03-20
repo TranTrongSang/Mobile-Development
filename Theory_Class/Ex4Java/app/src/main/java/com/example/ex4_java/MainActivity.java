@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -12,42 +13,29 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText editText;
+     EditText etInput;
+     Button btnSubmit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editText = findViewById(R.id.editText);
+        etInput = findViewById(R.id.et_input);
+        btnSubmit = findViewById(R.id.btn_submit);
 
-        // Xử lý sự kiện khi người dùng nhấn nút giữa của điện thoại
-        editText.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN) {
-                    displayAlertDialog();
-                    return true;
-                }
-                return false;
-            }
-        });
+        btnSubmit.setOnClickListener(this);
+
     }
 
 
-    // Hiển thị AlertDialog với nội dung là chuỗi văn bản từ EditText
-    private void displayAlertDialog() {
-        String userInput = editText.getText().toString().trim();
-        if (!userInput.isEmpty()) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Thông báo")
-                    .setMessage("Chuỗi văn bản: " + userInput)
-                    .setPositiveButton("Đóng", null)
-                    .show();
-        } else {
-            Toast.makeText(this, "Vui lòng nhập dữ liệu", Toast.LENGTH_SHORT).show();
+    @Override
+    public void onClick(View v) {
+            if (v == btnSubmit) {
+                String inputData = etInput.getText().toString();
+                Toast.makeText(MainActivity.this, inputData, Toast.LENGTH_SHORT).show();
         }
     }
 }
