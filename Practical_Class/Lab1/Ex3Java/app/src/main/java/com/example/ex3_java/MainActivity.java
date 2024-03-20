@@ -5,11 +5,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,24 +19,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Lấy ID của Button từ layout
-        final Button btn = findViewById(R.id.showTimeButton);
-        final AlertDialog ad = new AlertDialog.Builder(this).create();
+        Button buttonShowTime = findViewById(R.id.button_show_time);
+        buttonShowTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Lấy ngày tháng hiện tại
+                SimpleDateFormat sdfDate = new SimpleDateFormat("dd/MM/yyyy");
+                Date date = new Date();
+                String currentDate = sdfDate.format(date);
 
-        // Xử lý sự kiện khi nút được nhấn
-        btn.setOnClickListener(v -> {
-            // Lấy thời gian hiện hành
-//            String currentTime = getCurrentTime();
-
-            // Hiển thị thông báo với thời gian hiện hành
-            Toast.makeText(MainActivity.this, "Current Time: " + currentTime, Toast.LENGTH_SHORT).show();
+                // Hiển thị Toast với ngày tháng và thời gian
+                Toast.makeText(MainActivity.this, "Ngày tháng: " + currentDate + " - Thời gian: " + getCurrentTime(), Toast.LENGTH_SHORT).show();
+            }
         });
     }
-//
-//    // Phương thức để lấy thời gian hiện hành
-//    private String getCurrentTime() {
-//        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
-//        Date now = new Date();
-//        return dateFormat.format(now);
+
+    private String getCurrentTime() {
+        // Lấy thời gian hiện hành
+        SimpleDateFormat sdfTime = new SimpleDateFormat("HH:mm:ss");
+        Date date = new Date();
+        return sdfTime.format(date);
     }
 }
+
