@@ -85,11 +85,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText display; // Reference to the EditText for displaying numbers
+    private TextView display; // Reference to the EditText for displaying numbers
     private Button button7, button8, button9, buttonDivide, button4, button5, button6, buttonMultiply, button1, button2, button3, buttonSubtract, button0, buttonEqual, buttonClear, buttonPlus; // References to all buttons
     private double firstOperand, secondOperand; // Variables to store operands
     private String operator; // Variable to store the selected operator
@@ -118,30 +120,30 @@ public class MainActivity extends AppCompatActivity {
         buttonPlus = findViewById(R.id.buttonAdd);
 
         // Set click listeners for each button
-        button7.setOnClickListener(new View.OnClickListener() {
+        button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                display.append("7"); // Update the display with the button text
+                display.append("0"); // Update the display with the button text
+            }
+        });
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                display.append("1"); // Update the display with the button text
             }
         });
 
-        button8.setOnClickListener(new View.OnClickListener() {
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                display.append("8");
+                display.append("2"); // Update the display with the button text
             }
         });
 
-        button9.setOnClickListener(new View.OnClickListener() {
+        button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                display.append("9"); // Update the display with the button text
-            }
-        });
-        buttonDivide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                display.append("/"); // Update the display with the button text
+                display.append("3"); // Update the display with the button text
             }
         });
         button4.setOnClickListener(new View.OnClickListener() {
@@ -163,47 +165,52 @@ public class MainActivity extends AppCompatActivity {
                 display.append("6"); // Update the display with the button text
             }
         });
-        buttonMultiply.setOnClickListener(new View.OnClickListener() {
+        button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                display.append("*"); // Update the display with the button text
+                display.append("7"); // Update the display with the button text
             }
         });
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                display.append("1"); // Update the display with the button text
+                display.append("8");
             }
         });
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                display.append("2"); // Update the display with the button text
+                display.append("9"); // Update the display with the button text
             }
         });
+//        buttonPlus.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                display.append("+"); // Update the display with the button text
+//            }
+//        });
+//        buttonSubtract.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                display.append("-"); // Update the display with the button text
+//            }
+//        });
+//        buttonDivide.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                display.append("/"); // Update the display with the button text
+//            }
+//        });
+//
+//        buttonMultiply.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                display.append("*"); // Update the display with the button text
+//            }
+//        });
 
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                display.append("3"); // Update the display with the button text
-            }
-        });
-
-        buttonSubtract.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                display.append("-"); // Update the display with the button text
-            }
-        });
-
-        button0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                display.append("0"); // Update the display with the button text
-            }
-        });
 
         buttonDivide.setOnClickListener(new View.OnClickListener() {
             @Override

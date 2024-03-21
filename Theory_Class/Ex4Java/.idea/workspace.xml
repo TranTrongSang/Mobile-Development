@@ -16,15 +16,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bade42c3-1a1b-4938-8886-2fc95e7217f9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Practical_Class/Lab1/Ex5-Java/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practical_Class/Lab1/Ex5-Java/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practical_Class/Lab1/Ex5-Java/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practical_Class/Lab1/Ex5-Java/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practical_Class/Lab1/Ex5-Java/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practical_Class/Lab1/Ex5-Java/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practical_Class/Lab1/Ex5-Java/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practical_Class/Lab1/Ex5-Java/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practical_Class/Lab1/Ex5-Java/app/src/main/java/com/example/ex5_java/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practical_Class/Lab1/Ex5-Java/app/src/main/java/com/example/ex5_java/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practical_Class/Lab1/Ex5-Java/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practical_Class/Lab1/Ex5-Java/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practical_Class/Lab1/Ex5-Java/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practical_Class/Lab1/Ex5-Java/app/src/main/res/values/colors.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bade42c3-1a1b-4938-8886-2fc95e7217f9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +25,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[0925537312003231]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\stran\.android\avd\Medium_Phone_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
