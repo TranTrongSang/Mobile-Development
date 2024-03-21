@@ -100,7 +100,6 @@
 
 
 
-
         <Button
             android:id="@+id/button_equal"
             android:layout_width="wrap_content"
@@ -108,10 +107,10 @@
             android:layout_rowSpan="2"
             android:text="="/>
         <Button
-            android:id="@+id/button_backspace"
+            android:id="@+id/buttonClear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Del"/>
+            android:text="C"/>
 
         <Button
             android:id="@+id/buttonAdd"
