@@ -16,7 +16,22 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bade42c3-1a1b-4938-8886-2fc95e7217f9" name="Changes" comment="" />
+    <list default="true" id="bade42c3-1a1b-4938-8886-2fc95e7217f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Practical_Class/Lab2/Ex1/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practical_Class/Lab2/Ex1/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practical_Class/Lab2/Ex1/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practical_Class/Lab2/Ex1/app/src/androidTest/java/com/example/ex1/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practical_Class/Lab2/Ex1/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practical_Class/Lab2/Ex1/app/src/main/java/com/example/ex1/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practical_Class/Lab2/Ex1/app/src/main/java/com/example/ex1/ui/theme/Color.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practical_Class/Lab2/Ex1/app/src/main/java/com/example/ex1/ui/theme/Theme.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practical_Class/Lab2/Ex1/app/src/main/java/com/example/ex1/ui/theme/Type.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practical_Class/Lab2/Ex1/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practical_Class/Lab2/Ex1/app/src/main/res/menu/main_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practical_Class/Lab2/Ex1/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practical_Class/Lab2/Ex1/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practical_Class/Lab2/Ex1/app/src/test/java/com/example/ex1/ExampleUnitTest.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
