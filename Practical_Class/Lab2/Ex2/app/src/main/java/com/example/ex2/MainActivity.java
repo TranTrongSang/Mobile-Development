@@ -31,24 +31,27 @@ public class MainActivity extends AppCompatActivity {
 
     public void changeColor(View view) {
         int colorId = view.getId();
-        int color = Color.BLACK; // Màu mặc định
+        int backgroundColor = Color.BLACK; // Màu nền mặc định
+        int textColor = Color.BLACK; // Màu chữ mặc định
         String colorName = "";
 
         if (colorId == R.id.buttonRed) {
-            color = Color.RED;
+            backgroundColor = Color.RED;
             colorName = "Red";
         } else if (colorId == R.id.buttonGreen) {
-            color = Color.GREEN;
+            backgroundColor = Color.GREEN;
             colorName = "Green";
         } else if (colorId == R.id.buttonBlue) {
-            color = Color.BLUE;
+            backgroundColor = Color.BLUE;
+            textColor = Color.WHITE; // Nếu là màu Blue, chữ sẽ là màu trắng
             colorName = "Blue";
         } else if (colorId == R.id.buttonYellow) {
-            color = Color.YELLOW;
+            backgroundColor = Color.YELLOW;
             colorName = "Yellow";
         }
 
-        mainView.setBackgroundColor(color);
+        mainView.setBackgroundColor(backgroundColor);
         messageTextView.setText("Hello World, Now your Screen is " + colorName);
+        messageTextView.setTextColor(textColor); // Đặt màu chữ cho TextView
     }
 }

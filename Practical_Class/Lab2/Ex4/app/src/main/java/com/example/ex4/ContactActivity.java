@@ -2,6 +2,8 @@ package com.example.ex4;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -18,7 +20,7 @@ public class ContactActivity extends AppCompatActivity {
         TextView textViewName = findViewById(R.id.textViewName);
         TextView textViewEmail = findViewById(R.id.textViewEmail);
         TextView textViewProject = findViewById(R.id.textViewProject);
-
+        Button finishButton = findViewById(R.id.buttonFinish);
 // Lấy dữ liệu từ Intent mà bạn chuyển từ MainActivity và hiển thị nó trong TextView
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
@@ -28,7 +30,13 @@ public class ContactActivity extends AppCompatActivity {
         textViewName.setText("Name: " + name);
         textViewEmail.setText("Email: " + email);
         textViewProject.setText("Project: " + project);
-
+        finishButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        }
+        );
 
     }
 }

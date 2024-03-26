@@ -1,7 +1,6 @@
 package com.example.ex1;
 
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,35 +27,32 @@ public class MainActivity extends AppCompatActivity {
         int itemId = item.getItemId();
 
         if (itemId == R.id.menuNew) {
-            showToast("New selected");
+            showToast("New select");
             return true;
         } else if (itemId == R.id.menuSave) {
-            showToast("Save selected");
+            showToast("Saved");
             return true;
         } else if (itemId == R.id.menuLoad) {
             showToast("Load selected");
             return true;
-        } else if (itemId == R.id.menuEdit) {
-            showToast("Edit selected");
-            return true;
-        } else if (itemId == R.id.menuDelete) {
-            showToast("Delete selected");
+        }
+        else if (itemId == R.id.menuDelete) {
+            showToast("Deleted");
             return true;
         } else if (itemId == R.id.menuSend) {
             showToast("Sending.... ");
             return true;
         }else if (itemId == R.id.menuExit) {
-//            showToast("Load selected");
             finish();
             return true;
         }
         /* Continue with else if blocks for other menu items */
         else {
+            if(itemId == R.id.menuView ||itemId == R.id.menuTool)
+                showToast("Nothing to show");
             return super.onOptionsItemSelected(item);
         }
     }
-
-
 
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
