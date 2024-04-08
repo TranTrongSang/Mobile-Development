@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         return new Intent(Intent.ACTION_VIEW, Uri.parse(url));
     }
 
-    private Intent createCustomIntent1() {
+     private Intent createCustomIntent1() {
         // Define your custom intent with permission here
         return null;
     }
