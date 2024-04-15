@@ -30,7 +30,3 @@ class Splashscreen : AppCompatActivity() {
         }
     }
 }
-
-private fun Handler.postDelayed(function: () -> Unit) {
-
-}
