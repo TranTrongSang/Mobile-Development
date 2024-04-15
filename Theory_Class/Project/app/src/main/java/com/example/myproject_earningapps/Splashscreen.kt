@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 class Splashscreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.AppTheme)
         enableEdgeToEdge()
         setContentView(R.layout.activity_splashscreen)
         Handler(Looper.getMainLooper()).postDelayed({
