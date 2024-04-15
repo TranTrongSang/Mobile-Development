@@ -21,19 +21,25 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:includeFontPadding="false"
         android:text="Welcome"
+        android:textColor="@color/textColorWhite"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="475dp" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="203dp"
-        android:layout_height="41dp"
+        android:layout_width="268dp"
+        android:layout_height="52dp"
         android:text="Nice to meet you! Let's make your knowledge great"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="523dp" />
+        android:textColor="@color/textColorWhite"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="526dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -41,6 +47,9 @@
         android:layout_height="wrap_content"
         android:text="Design by Sang"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="157dp"
+        android:textColor="@color/textColorWhite"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="696dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
