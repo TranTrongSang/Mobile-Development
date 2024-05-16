@@ -19,9 +19,10 @@ android {
             useSupportLibrary = true
         }
     }
-
     buildFeatures{
-        viewBinding = true
+        viewBinding{
+            enable = true
+        }
     }
 
     buildTypes {
@@ -54,7 +55,9 @@ android {
 }
 
 dependencies {
-
+    implementation("com.google.android.material:material:1.5.0")
+    implementation("androidx.appcompat:appcompat:1.3.1")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
