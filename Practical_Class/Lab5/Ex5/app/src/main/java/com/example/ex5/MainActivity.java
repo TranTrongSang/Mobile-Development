@@ -1,33 +1,73 @@
 package com.example.ex5;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ListView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import android.provider.Settings;
+import android.widget.Button;
+import android.widget.TimePicker;
+import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ListView alarmListView;
-    private FloatingActionButton addAlarmButton;
+    private TimePicker timePicker;
+    private Button setAlarmButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        alarmListView = findViewById(R.id.alarmListView);
-        addAlarmButton = findViewById(R.id.addAlarmButton);
+        timePicker = findViewById(R.id.timePicker);
+        setAlarmButton = findViewById(R.id.setAlarmButton);
 
-        addAlarmButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AddAlarmActivity.class);
-                startActivity(intent);
+        setAlarmButton.setOnClickListener(v -> {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                if (canScheduleExactAlarms()) {
+                    setAlarm();
+                } else {
+                    requestExactAlarmPermission();
+                }
+            } else {
+                setAlarm();
             }
         });
+    }
 
-        // TODO: Load alarms from storage and display them
+    @RequiresApi(api = Build.VERSION_CODES.S)
+    private boolean canScheduleExactAlarms() {
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        return alarmManager != null && alarmManager.canScheduleExactAlarms();
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.S)
+    private void requestExactAlarmPermission() {
+        Intent intent = new Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM);
+        startActivity(intent);
+    }
+
+    private void setAlarm() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY, timePicker.getHour());
+        calendar.set(Calendar.MINUTE, timePicker.getMinute());
+        calendar.set(Calendar.SECOND, 0);
+
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(this, AlarmReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
+
+        if (alarmManager != null) {
+            alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+            Toast.makeText(this, "Alarm set for " + timePicker.getHour() + ":" + timePicker.getMinute(), Toast.LENGTH_SHORT).show();
+        }
     }
 }
+
