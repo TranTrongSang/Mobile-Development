@@ -49,7 +49,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(platform(libs.androidx.compose.bom))
@@ -62,14 +61,20 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-}
-dependencies {
+
+    // Thêm các phụ thuộc mới
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.github.bumptech.glide:glide:4.11.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.11.0")
+    annotationProcessor(libs.compiler)
+    implementation(libs.glide)
+    implementation(libs.converter.gson)
+    implementation(libs.retrofit)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation (com.android.support:leanback-v17:28.0.0)
-    implementation (com.squareup.retrofit2:retrofit:2.9.0)
-    implementation (com.squareup.retrofit2:converter-gson:2.9.0)
-    implementation (com.github.bumptech.glide:glide:4.11.0)
-    annotationProcessor (com.github.bumptech.glide:compiler:4.11.0)
 }
+
+
+

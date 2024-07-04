@@ -11,18 +11,14 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-//dependencyResolutionManagement {
-//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-//}
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
     }
 }
 
-rootProject.name = "Ex6"
-include(":mobile")
-include(":tv")
+rootProject.name = "TvApp"
+include(":app")
  

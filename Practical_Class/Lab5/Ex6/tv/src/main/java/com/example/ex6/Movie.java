@@ -1,6 +1,5 @@
 package com.example.ex6;
 
-package com.example.myfavoritemovies;
 
 import com.google.gson.annotations.SerializedName;
 
