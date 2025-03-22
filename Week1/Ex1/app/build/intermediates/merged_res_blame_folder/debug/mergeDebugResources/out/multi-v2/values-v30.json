@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.w1_ex1.app-mergeDebugResources-60:/values-v30/values-v30.xml",
+            "outputFile": "com.example.ex1.app-mergeDebugResources-60:/values-v30/values-v30.xml",
             "map": [
                 {
                     "source": "C:\\Users\\stran\\.gradle\\caches\\8.11.1\\transforms\\da4847378408537dac96ce0dd1266c3e\\transformed\\material3-release\\res\\values-v30\\values-v30.xml",

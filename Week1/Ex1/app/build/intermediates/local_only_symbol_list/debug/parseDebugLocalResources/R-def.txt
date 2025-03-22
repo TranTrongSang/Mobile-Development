@@ -7,13 +7,13 @@ color purple_700
 color teal_200
 color teal_700
 color white
-drawable cat_profile
+drawable cat_picture
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 layout activity_main
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
-style Theme.W1_ex1
+style Theme.Ex1
 xml backup_rules
 xml data_extraction_rules
